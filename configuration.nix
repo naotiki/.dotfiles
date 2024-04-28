@@ -49,7 +49,7 @@
   };
   
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-emoji
@@ -75,8 +75,10 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "jp";
-    xkbVariant = "";
+    xkb ={
+      layout = "jp";
+      variant = "";
+    };
   };
 
   # Configure console keymap
