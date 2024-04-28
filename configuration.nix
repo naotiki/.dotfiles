@@ -133,12 +133,13 @@
   environment.systemPackages = with pkgs; [
     curl
     wget
+    gnomeExtensions.kimpanel
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   ];
   programs = {
     git = {
       enable = true;
-      configExtra = {
+      config = {
         init.defaultBranch = "main";
       };
     };
@@ -153,7 +154,7 @@
     };
     zsh = {
       enable = true;
-    }
+    };
   };
   
   # Some programs need SUID wrappers, can be configured further or are
@@ -191,6 +192,6 @@
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
-    }
+    };
   };
 }
