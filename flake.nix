@@ -19,7 +19,7 @@
     homeConfigurations = {
       myHome = inputs.home-manager.lib.homeManagerConfiguration {
         pkgs = import inputs.nixpkgs {
-          system = "x64_64-linux";
+          system = "x86_64-linux";
           config.allowUnfree = true;
         };
         extraSpecialArgs = {
